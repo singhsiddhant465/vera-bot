@@ -1,0 +1,13 @@
+services:
+  vera-bot:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      # set these before submitting
+      VERA_TEAM_NAME: "Siddhant Singh"
+      VERA_TEAM_MEMBERS: "Siddhant Singh"
+      VERA_CONTACT_EMAIL: "your-college-email@dtu.ac.in"
+      # VERA_LLM_ENHANCE: "1"          # optional: enable temp-0 rephraser
+      # ANTHROPIC_API_KEY: "sk-ant-..." # required only if VERA_LLM_ENHANCE=1
+    restart: unless-stopped

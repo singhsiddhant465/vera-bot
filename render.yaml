@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vera-bot
+    runtime: docker
+    plan: free
+    healthCheckPath: /v1/healthz
+    envVars:
+      - key: VERA_TEAM_NAME
+        value: "Siddhant Singh"
+      - key: VERA_TEAM_MEMBERS
+        value: "Siddhant Singh"
+      - key: VERA_CONTACT_EMAIL
+        sync: false          # set this in the Render dashboard (your college email)
